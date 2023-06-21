@@ -11,14 +11,16 @@ UPPER_LIMIT = 1001
 FIRST_TRY = 1
 LAST_TRY = 11
 
+print('Угадайте число от 0 до 1000. У Вас 10 попыток: ')
+print('Удачи!')
 num = randint(LOWER_LIMIT, UPPER_LIMIT)
 for i in range(FIRST_TRY, LAST_TRY):
-    n = int(input(f"Попытка номер {i}, попытайтесь отгадать число: "))
+    n = int(input(f"Попытка номер {i}: "))
     turn = ""
     if n > num:
-        turn = "Меньше"
+        turn = "Зададанное число меньше"
     elif n < num:
-        turn = "Больше"
+        turn = "Зададанное число больше"
     else:
         print("Победа!")
         break
