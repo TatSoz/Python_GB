@@ -6,7 +6,9 @@ def fib_gen(num):
         yield a
         a, b = b, a + b
 
-n = int(input('Введите число: '))
-for i in fib_gen(n):
-    print(i, end=' ')
+
+if __name__ == '__main__':
+    n = int(input('Введите число: '))
+    for i in fib_gen(n):
+        print(i, end=' ')
 
