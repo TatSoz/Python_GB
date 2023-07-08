@@ -57,7 +57,7 @@ if __name__ == "__main__":
         if check_queen(list_position):
             print("Ферзи не бьют друг друга")
         else:
-            print("Есть ферзи под ударом")
+            print("Ферзи под ударом")
 
 
     total_case_generate = 0
@@ -71,6 +71,6 @@ if __name__ == "__main__":
             case_ok += 1
             list_ok_positions.append(generated_position)
 
-    print(f" Всего сгенерировано {total_case_generate}, удачные:")
+    print(f" Всего сгенерировано {total_case_generate}, успешных расстановки:")
     for pos in list_ok_positions:
         print(pos)
