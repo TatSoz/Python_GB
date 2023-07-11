@@ -27,7 +27,7 @@ if __name__ == "__main__":
         Path('text'): ['pdf', 'doc', 'txt'],
         Path('binary'): ['bin', 'dll'],
     }
-    group_files('Files')
+    group_files('../../Files')
 
 
 

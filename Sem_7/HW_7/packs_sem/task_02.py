@@ -18,7 +18,7 @@ def pseudo_gen(num_names: int, file_name: str) -> None:
 
 
 if __name__ == '__main__':
-    pseudo_gen(10, 'task_02.txt')
+    pseudo_gen(10, '../../task_02.txt')
 
 
 

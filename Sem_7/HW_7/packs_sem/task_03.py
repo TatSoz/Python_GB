@@ -58,7 +58,7 @@ def convert(names_file: str, nums_file: str, result_file: str) -> None:
 
 
 if __name__ == '__main__':
-    convert('task_02.txt', 'task_01.txt', 'task_03.txt')
+    convert('../../task_02.txt', 'task_01.txt', 'task_03.txt')
 
 
 
