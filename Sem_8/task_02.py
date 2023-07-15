@@ -25,7 +25,7 @@ def add_user(path: str) -> None:
         level = int(input('Введите уровень доступа (от 1 до 7): '))
         if id_num in tmp_set and my_dict[level].get(id_num) is None:
             continue
-        tmp_set.update(id_num)
+        tmp_set.add(id_num)
         my_dict[level].update({id_num:name})
 
         with open(path, 'w', encoding='utf-8') as j:
@@ -33,7 +33,7 @@ def add_user(path: str) -> None:
 
 
 if __name__ == '__main__':
-    add_user('ex_2.json')
+    add_user('task_2.json')
 
 
 
