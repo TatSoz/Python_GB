@@ -24,6 +24,7 @@ def generating_csv_file(file_name: str):
         rows.append([a, b, c])
     with open(file_name, 'w', newline='', encoding='utf-8') as f:
         csv_wr = csv.writer(f)
+        csv_wr.writerow(['a', 'b', 'c'])
         csv_wr.writerows(rows)
 
 
