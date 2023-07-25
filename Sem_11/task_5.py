@@ -5,8 +5,11 @@
 # При вычитании не допускайте отрицательных значений.
 
 class Rectangle:
+    """Класс Прямоугольник."""
 
     def __init__(self, width: float, height: float = None):
+        """Инициализация нового экземпляра."""
+
         self.width = width
         if height is None:
             self.height = width
@@ -14,12 +17,18 @@ class Rectangle:
             self.height = height
 
     def calc_perimeter(self):
+        """Расчет периметра прямоугольника."""
+
         return (self.height + self.width) * 2
 
     def calc_area(self):
+        """Расчет площади прямоугольника."""
+
         return self.width * self.height
 
     def __add__(self, other):
+        """Сложение двух прямоугольников."""
+
         new_perimeter = self.calc_perimeter() + other.calc_perimeter()
         width = self.width + other.width
         height = new_perimeter / 2 - width
@@ -27,6 +36,8 @@ class Rectangle:
 
 
     def __sub__(self, other):
+        """Вычитание прямоугольников"""
+
         if self.calc_perimeter() < other.calc_perimeter():
             self, other = other, self
         width = abs(self.width - other.width)

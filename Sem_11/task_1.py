@@ -4,9 +4,14 @@
 
 from time import time
 class MyString(str):
-    """It's just a new class"""
+    """Класс строки"""
 
     def __new__(cls, value: str, author_name: str):
+        """Инициализация класса.
+        :value: Значение строки.
+        :author_name: Имя автора строк
+        """
+
         instance = super().__new__(cls, value)
         instance.author_name = author_name
         instance.time_created = time()
