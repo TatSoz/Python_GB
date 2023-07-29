@@ -8,7 +8,7 @@ class Student:
     first_name = des.CheckName()
     last_name = des.CheckName()
     patronymic = des.CheckName()
-    subject = des.CheckSubject('subjects.csv')
+    subject = des.CheckSubject('subjects.scv')
     subject_score = des.CheckSubjectScore(min_sub_score=2, max_sub_score=5)
     test_score = des.CheckTesttScore(min_test_score=0, max_test_score=100)
     subjects = []
@@ -71,4 +71,3 @@ if __name__ == '__main__':
     print(st_1.get_avg())
 
     # st_1.add_subject('астрономия', 5, 82)
-
