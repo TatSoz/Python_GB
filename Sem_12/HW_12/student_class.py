@@ -13,19 +13,20 @@ class Student:
     test_score = des.CheckTesttScore(min_test_score=0, max_test_score=100)
     subjects = []
 
-    def __init__(self, first_name, last_name, patronymic, subject, subject_score, test_score):
+
+    def __init__(self, first_name, patronymic, last_name, subject, subject_score, test_score):
         """
         Конструктор класса
         :param first_name: Имя студента
-        :param last_name: Фамилия студента
         :param patronymic: Отчество студента
+        :param last_name: Фамилия студента
         :param subject: Предмет студента
         :param subject_score: Оценка по предмету
         :param test_score: Оценка теста по предмету
         """
         self.first_name = first_name
-        self.last_name = last_name
         self.patronymic = patronymic
+        self.last_name = last_name
         self.subject = subject
         self.subject_score = subject_score
         self.test_score = test_score
@@ -33,7 +34,8 @@ class Student:
 
     @property
     def full_name(self):
-        return f'{self.last_name} {self.first_name} {self.patronymic}'
+        return f'{self.first_name} {self.patronymic} {self.last_name}'
+
 
     def add_subject(self, subject, subject_score, test_score):
         """Метод добавления нового предмета студенту"""
@@ -42,12 +44,13 @@ class Student:
         self.test_score = test_score
         self._update_subjects()
 
+
     def _update_subjects(self):
         """Метод добавления предмета в список предметов"""
         self.subjects.append({
-            "subject": self.subject,
-            "subject_score": self.subject_score,
-            "test_score": self.test_score,
+            'subject': self.subject,
+            'subject_score': self.subject_score,
+            'test_score': self.test_score,
         })
 
     def get_avg(self):
@@ -60,10 +63,10 @@ class Student:
 
 
 if __name__ == '__main__':
-    st_1 = Student("Иван", "Иванов", "Иванович", "геометрия", 5, 87)
+    st_1 = Student('Иван', 'Иванович', 'Иванов', 'геометрия', 5, 87)
     print(f'Успеваемость студента {st_1.full_name}:')
     print(st_1.get_avg())
-    st_1.add_subject("физика", 5, 78)
+    st_1.add_subject('физика', 5, 78)
     st_1.add_subject('алгебра', 4, 66)
     print(st_1.get_avg())
 
