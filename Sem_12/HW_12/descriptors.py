@@ -56,8 +56,8 @@ class CheckSubjectScore:
     def validate(self, value):
         """Метод, проверяющий, что оценки входят в диапазон"""
         if self.min_sub_score > value or value > self.max_sub_score:
-            raise ValueError(f'Некорректная оценка предмета: {value}\n'
-                             f'Оценка должна быть в диапазоне от {self.min_sub_score} до {self.max_sub_score}')
+            raise ValueError(f"Некорректная оценка предмета: {value}\n"
+                             f"Оценка должна быть в диапазоне от {self.min_sub_score} до {self.max_sub_score}")
 
 
 class CheckTesttScore:
@@ -78,5 +78,5 @@ class CheckTesttScore:
     def validate(self, value):
         """Метод, проверяющий, что оценки входят в диапазон"""
         if self.min_test_score > value or value > self.max_test_score:
-            raise ValueError(f'Некорректная оценка теста: {value}\n'
-                             f'Оценка должна быть в диапазоне от {self.min_test_score} до {self.max_test_score}')
+            raise ValueError(f"Некорректная оценка теста: {value}\n"
+                             f"Оценка должна быть в диапазоне от {self.min_test_score} до {self.max_test_score}")
