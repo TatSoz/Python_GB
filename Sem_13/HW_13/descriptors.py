@@ -11,7 +11,6 @@ class CheckName:
         self.validate(value)
         return setattr(instance, self.param_name, value)
 
-    # @staticmethod
     def validate(self, value):
         """Метод, проверяющий, что имя состоит только из букв и начинается на заглавную"""
         if not isinstance(value, str):
