@@ -37,7 +37,7 @@ class Project:
 
 if __name__ == '__main__':
     project1 = Project()
-    project1.load_json('task_4.json')
+    project1.load_json('task_6.json')
     print(project1.enter('Olga', 3))
     # print(project1.enter('Olg', 11))
     print(f'Добавлен {project1.add_user("Lara", 12, 9)}')

@@ -15,6 +15,12 @@ def transl(d: int, b: int) -> str:
     return ''.join(l[::-1])
 
 print(transl(123, 2))
+print()
 print(transl(123, 8))
-print(bin(123))
+print('рез')
+print(transl(-123, 2))
+print('hp')
+print(transl(-123, 8))
+
+# print(bin(123))
 print()

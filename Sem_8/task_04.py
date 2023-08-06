@@ -29,7 +29,7 @@ def from_csv_to_json(file_csv: str, file_json: str) -> None:
 
 
 if __name__ == '__main__':
-    from_csv_to_json('task_3.csv', 'task_4.json')
+    from_csv_to_json('task_3.csv', 'task_6.json')
 
 
 

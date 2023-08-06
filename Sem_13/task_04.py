@@ -37,7 +37,7 @@ def data_from_json(file_name: str) -> set[UserData]:
 
 
 if __name__ == '__main__':
-    users_set = data_from_json('task_4.json')
+    users_set = data_from_json('task_6.json')
     for item in users_set:
         print(item)
 
